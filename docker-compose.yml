@@ -6,6 +6,8 @@ app:
     - redis
   volumes:
     - ".:/go/src/app"
+  volumes_from:
+    - myapp-gopath
   command: go run main.go
 
 redis:
